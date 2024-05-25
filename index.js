@@ -98,3 +98,16 @@ console.log(contador1()); // 3
 let contador2 = contador();
 console.log(contador2()); // 1
 console.log(contador2()); // 2
+
+
+//Exercício 5 - Redução de Arrays
+
+let numbers = [1, 2, 3, 4, 5];
+
+function calcularProduto(numeros) {
+    return numeros.reduce((produto, numero) => produto * numero, 1);
+}
+  
+console.log("Exercício 5 :", calcularProduto(numbers)); // 120
+
+
