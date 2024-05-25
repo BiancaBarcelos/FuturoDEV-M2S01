@@ -12,4 +12,27 @@ function filtrarPares(numeros) {
     return pares
 }
 
-console.log(filtrarPares(numeros))
+console.log("Exercício 01 :", filtrarPares(numeros))
+
+
+//Exercício 02 - Manipulação de Objetos
+
+let pessoas = [
+{ nome: 'Alice', idade: 17 },
+{ nome: 'Bob', idade: 22 },
+{ nome: 'Charlie', idade: 16 },
+{ nome: 'David', idade: 19 }
+];
+
+function filtrarAdultos(pessoas) {
+
+    let maiorIdade = [];
+    pessoas.map(pessoa => {
+        if (pessoa.idade >= 18) {
+            maiorIdade.push(pessoa.nome)
+        }
+    })
+    return maiorIdade
+}
+
+console.log("Exercício 02 :", filtrarAdultos(pessoas));
