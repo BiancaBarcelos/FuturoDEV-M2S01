@@ -127,6 +127,7 @@ console.log("Exercício 6 :", transformarArray(numerosArray, dobrar)); // [2, 4,
 
 //Exercício 7 - Composição de Funções
 
+let funcaoComposta = compor(somar1, multiplicar2);
 
 function compor(f, g) {
     return function(x) {
@@ -141,6 +142,5 @@ function somar1(x) {
 function multiplicar2(x) {
     return x * 2;
 }
-let funcaoComposta = compor(somar1, multiplicar2);
 
 console.log("Exercício 7 :", funcaoComposta(5)); // 11 (multiplicar2(5) = 10, somar1(10) = 11)
