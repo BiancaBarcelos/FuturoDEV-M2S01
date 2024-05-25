@@ -76,3 +76,25 @@ let agruparPorCategoria = produtos.map(categoria => {
 valorAgrupado = {...valorAgrupado, [cat1Nome] : cat1, [cat2Nome] : cat2, [cat3Nome] : cat3}
 
 console.log("Exercício 03 :", valorAgrupado);
+
+//Exercício 04 -  Funções que Retornam Funções (Closures)
+
+function contador() {
+    let count = 0;
+
+    return function() {
+        count++;
+        
+        return count;
+    };
+}
+
+console.log("Exercício 04 :")
+let contador1 = contador();
+console.log(contador1()); // 1
+console.log(contador1()); // 2
+console.log(contador1()); // 3
+
+let contador2 = contador();
+console.log(contador2()); // 1
+console.log(contador2()); // 2
