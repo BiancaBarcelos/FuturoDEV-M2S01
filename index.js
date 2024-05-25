@@ -111,3 +111,15 @@ function calcularProduto(numeros) {
 console.log("Exercício 5 :", calcularProduto(numbers)); // 120
 
 
+//Exercício 6 - Funções de Alta Ordem
+
+function transformarArray(array, transformacao) {
+    return array.map(transformacao);
+  }
+  
+  function dobrar(numero) {
+    return numero * 2;
+  }
+  
+  let numerosArray = [1, 2, 3, 4, 5];
+  console.log("Exercício 6 :", transformarArray(numerosArray, dobrar)); // [2, 4, 6, 8, 10]
