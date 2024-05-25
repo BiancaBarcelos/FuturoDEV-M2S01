@@ -36,3 +36,43 @@ function filtrarAdultos(pessoas) {
 }
 
 console.log("Exercício 02 :", filtrarAdultos(pessoas));
+
+//Exercício 03 -  Agrupamento de Dados
+
+let produtos = [
+    { categoria: 'eletrônicos', preco: 99.99 },
+    { categoria: 'livros', preco: 19.99 },
+    { categoria: 'eletrônicos', preco: 199.99 },
+    { categoria: 'livros', preco: 29.99 },
+    { categoria: 'roupas', preco: 49.99 }
+];
+let cat1 = 0;
+let cat1Nome = "";
+
+let cat2 = 0;
+let cat2Nome = "";
+
+let cat3 = 0;
+let cat3Nome = "";
+
+let valorAgrupado = {};
+
+let agruparPorCategoria = produtos.map(categoria => {
+
+    if (categoria.categoria === "eletrônicos") {
+        cat1 += categoria.preco
+        cat1Nome = categoria.categoria
+    } 
+    if (categoria.categoria === "livros") {
+        cat2 += categoria.preco
+        cat2Nome = categoria.categoria
+    } 
+    if (categoria.categoria === "roupas") {
+        cat3 += categoria.preco
+        cat3Nome = categoria.categoria
+    } 
+})
+
+valorAgrupado = {...valorAgrupado, [cat1Nome] : cat1, [cat2Nome] : cat2, [cat3Nome] : cat3}
+
+console.log("Exercício 03 :", valorAgrupado);
